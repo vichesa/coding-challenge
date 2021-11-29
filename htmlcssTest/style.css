@@ -20,6 +20,11 @@
 
 .card .body {
   padding: 10px;
+  font-size: medium;
+}
+
+.title {
+  font-size: larger;
 }
 
 .subtitle {
@@ -52,9 +57,10 @@
 }
 
 a {
-  text-decoration: none;
-  font-size: small;
+  text-decoration: none !important;
+  font-size: smaller;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
+  cursor: pointer;
 }
