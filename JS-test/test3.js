@@ -47,8 +47,8 @@ function result(arr1, arr2) {
       val2 = true;
     }
   }
-  console.log(val1);
-  console.log('small', val2);
+  // console.log(val1);
+  // console.log('small', val2);
   const res = [val1, val2];
   return res;
 }
