@@ -52,12 +52,12 @@ const schoolId = '2';
 function result(students, schoolId) {
   // Your Code Here
   let res = [];
-  let resp = students.map((student) => student.school.id === schoolId);
+  // let resp = students.map((student) => student.school.id === schoolId);
   for (i = 0; i < students.length; i++) {
     if (students[i].school.id === schoolId) {
       res.push({
-        student_name: students[i].name,
-        school: students[i].school.short_name,
+        name: students[i].name,
+        school_name: students[i].school.short_name,
       });
     }
   }

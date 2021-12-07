@@ -7,49 +7,39 @@ const arr2 = [1, 3, 4, 7, 9, 10];
 
 function result(arr1, arr2) {
   // Your Code Here
-  let first = [];
-  let second = [];
-  let val1 = null;
-  let val2 = null;
-  let biggest = arr1[0];
-  let smallest = arr1[0];
+  let biggest = Math.max(...arr1);
+  let smallest = Math.min(...arr1);
+  let val1 = [];
+  let val2 = [];
+  let first;
+  let second;
 
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] > biggest) {
-      biggest = arr1[i];
-    }
-
-    if (arr1[i] < smallest) {
-      smallest = arr1[i];
-    }
-  }
-
-  for (let j = 0; j < arr2.length; j++) {
-    if (arr2[j] > biggest) {
-      first.push(true);
+  //check the value
+  for (let i = 0; i < arr2.length; i++) {
+    if (arr2[i] > biggest) {
+      val1.push(true);
     } else {
-      first.push(false);
+      val1.push(false);
     }
-
-    if (arr2[j] < smallest) {
-      second.push(true);
+    if (arr2[i] < smallest) {
+      val2.push(true);
     } else {
-      second.push(false);
+      val2.push(false);
     }
   }
 
-  for (k = 0; k < first.length; k++) {
-    if (first[k] === false) {
-      val1 = false;
-    }
-
-    if (second[k] === true) {
-      val2 = true;
+  //result
+  for (let j = 0; j < val1.length; j++) {
+    if (val1[j] === false) {
+      first = false;
     }
   }
-  // console.log(val1);
-  // console.log('small', val2);
-  const res = [val1, val2];
+  for (let k = 0; k < val2.length; k++) {
+    if (val2[k] === true) {
+      second = true;
+    }
+  }
+  let res = [first, second];
   return res;
 }
 
