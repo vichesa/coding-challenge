@@ -14,7 +14,7 @@ function result(arr1, arr2) {
   let first;
   let second;
 
-  //check the value
+  //check the value of each element
   for (let i = 0; i < arr2.length; i++) {
     if (arr2[i] > biggest) {
       val1.push(true);
